@@ -1,0 +1,15 @@
+extend base.pug
+block style
+    style 
+        include ../static/index.css
+    script(src="/socket.io/socket.io.js")
+    script(src="/static/index.js" defer)
+
+block content
+    section
+        h1 Welcome To Ichat
+        div#chat
+        div#input
+            input#message(type="text", name="message", placeholder="Your Message")
+            button(onclick="submit()") Submit
+
